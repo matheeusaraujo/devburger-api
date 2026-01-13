@@ -101,7 +101,8 @@ JWT_SECRET=sua_chave_secreta
 ```bash
 yarn dev
 ````
-
+<div align="center">
+  
 ##  Endpoints Principais
 
 | Método | Endpoint | Descrição |  
@@ -115,12 +116,19 @@ yarn dev
 | **`GET`** | `/orders` | → Listar pedidos
 | **`POST`** | `/orders` | → Criar pedido
 
+</div>
+
 ## Scripts Disponíveis
 
 ```bash
 yarn dev       # Executa a aplicação em modo desenvolvimento
 yarn start     # Executa a aplicação em modo produção
 ````
+##  Licença
+<p>
+  Este projeto está sob a licença MIT.
+</p>
+
 
 
 
