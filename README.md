@@ -27,32 +27,6 @@ Este projeto foi desenvolvido com foco em:
 Ideal para estudos e demonstração de conhecimentos em **backend com Node.js**.
 
 ---
-## 📸 Preview da Aplicação
-
-### 🏠 Home / Menu
-<img src=".github/screenshots/home.png" alt="Home DevBurger" width="800"/>
-
----
-
-### 🛒 Carrinho de Compras
-<img src=".github/screenshots/cart.png" alt="Carrinho DevBurger" width="800"/>
-
----
-
-### 🔐 Login
-<img src=".github/screenshots/login.png" alt="Login DevBurger" width="800"/>
-
----
-
-### 💳 Checkout
-<img src=".github/screenshots/checkout.png" alt="Checkout DevBurger" width="800"/>
-
----
-
-### 🛠️ Painel Admin
-<img src=".github/screenshots/admin-products.png" alt="Admin DevBurger" width="800"/>
-
----
 
 ## Funcionalidades
 
@@ -99,33 +73,51 @@ devburger-api
 ````
 ## Como Executar o Projeto
 ```bash
-git clone https://github.com/matheeusaraujo/devburger-interface.git
+git clone https://github.com/matheeusaraujo/devburger-api.git
 ````
 ## Acessar a pasta
 ```bash
-cd devburger-interface
+cd devburger-api
 ````
 ## Instalar as dependências
 ```bash
 yarn install
 ````
+##  Variáveis de Ambiente
+📍 Crie um arquivo .env baseado no .env.example:
+```bash
+PORT=3000
+
+DB_HOST=localhost
+DB_USER=seu_usuario
+DB_PASS=sua_senha
+DB_NAME=devburger
+
+JWT_SECRET=sua_chave_secreta
+````
+
 ## ▶️ Executando a Aplicação
-📍 A aplicação será aberta geralmente em: http://localhost:5173
+📍 A API estará disponível em: http://localhost:3000
 ```bash
 yarn dev
 ````
 
-##  Licença
-<p>
-  Este projeto está sob a licença MIT.
-</p>
+##  Endpoints Principais
 
+| Método | Endpoint | Descrição |  
+| :--- | :--- | :--- | 
+| **`POST`** | `/users` | → Cadastro de usuário
+| **`POST`** | `/session` | → Login
+| **`GET`** | `/categories` | → Listar categorias
+| **`POST`** | `categories` | → Criar categoria
+| **`GET`** | `products` | → Listar produtos
+| **`POST`** | `/products` | → Criar produto
+| **`GET`** | `/orders` | → Listar pedidos
+| **`POST`** | `/orders` | → Criar pedido
 
+## Scripts Disponíveis
 
-
-
-
-
-
-
-
+```bash
+yarn dev       # Executa a aplicação em modo desenvolvimento
+yarn start     # Executa a aplicação em modo produção
+````
